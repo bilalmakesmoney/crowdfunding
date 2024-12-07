@@ -25,3 +25,7 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+.logo {
+  cursor: pointer;
+}

@@ -8,6 +8,10 @@ export default {
         primary: "#00D1FF",
         secondary: "#1E1E1E",
       },
+      screens: {
+        new: "1000px",
+        bad: "400px",
+      },
     },
   },
   plugins: [],

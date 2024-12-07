@@ -2,11 +2,13 @@ import google from "../../public/google.png";
 
 const Signup = () => {
   return (
-    <div className="w-screen min-h-screen grid place-items-center">
-      <div className="flex flex-col gap-3 bg-secondary items-center rounded-xl px-8 py-8">
-        <h1 className="text-[30px] font-semibold mb-4">WELCOME TO FUNDRA🤩</h1>
-        <div className="flex gap-2">
-          <div className="flex flex-col gap-2">
+    <div className="w-screen min-h-screen grid place-items-center px-4 sm:px-8 my-6">
+      <div className="flex flex-col gap-4 bg-secondary items-center rounded-xl px-6 sm:px-12 py-8 w-full sm:w-[400px]">
+        <h1 className="text-[24px] sm:text-[30px] font-semibold mb-4 text-center">
+          WELCOME TO FUNDRA🤩
+        </h1>
+        <div className="flex flex-col sm:flex-row gap-5 w-full">
+          <div className="flex flex-col gap-2 w-full sm:w-[calc(50%-10px)]">
             <label>First name</label>
             <input
               type="text"
@@ -14,7 +16,7 @@ const Signup = () => {
               placeholder="John"
             />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 w-full sm:w-[calc(50%-10px)]">
             <label>Last name</label>
             <input
               type="text"
@@ -24,7 +26,7 @@ const Signup = () => {
           </div>
         </div>
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="">Email</label>
+          <label>Email</label>
           <input
             type="text"
             className="h-9 rounded-md bg-background/50 border-none outline-none px-6 py-2 w-full"
@@ -32,9 +34,9 @@ const Signup = () => {
           />
         </div>
         <div className="flex flex-col gap-2 w-full">
-          <label htmlFor="">Password</label>
+          <label>Password</label>
           <input
-            type="text"
+            type="password"
             className="h-9 rounded-md bg-background/50 border-none outline-none px-6 py-2 w-full"
             placeholder="********"
           />
@@ -44,14 +46,15 @@ const Signup = () => {
         </button>
         <div className="w-full h-[0.5px] bg-white/10 my-3"></div>
         <button className="w-full h-9 flex py-1 gap-3 justify-center items-center bg-[#454545]/40 rounded-md mt-4">
-          <img src={google} alt="" className="w-6 h-6" />
+          <img src={google} alt="Google" className="w-6 h-6" />
           <span>Sign up with Google</span>
         </button>
-        <span className="text-white/40 font-light">
+        <span className="text-white/40 font-light text-center">
           Already have an account? <span className="text-blue-400">Login</span>
         </span>
       </div>
     </div>
   );
 };
+
 export default Signup;

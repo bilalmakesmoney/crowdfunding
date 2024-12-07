@@ -72,20 +72,20 @@ const Campaigns = () => {
   ];
 
   return (
-    <div className="grid grid-cols-4 my-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-8">
       {campaigndata.map((data) => (
         <Link
           className="w-full h-full relative"
           to={`/campaigns/${data.id}`}
           key={data.id}
         >
-          <div className="bg-slate-300 w-64 h-40 rounded-xl -z-50"></div>
-          <div className="w-64 px-6 py-6 -translate-y-4 rounded-b-xl bg-secondary mb-8">
+          <div className="bg-slate-300 w-full h-40 rounded-xl"></div>
+          <div className="px-6 py-6 -translate-y-4 rounded-b-xl bg-secondary mb-8">
             <div className="flex items-center gap-3">
               <GiStarSwirl className="text-xl text-white/40" />
               <span className="text-white/40">{data.category}</span>
             </div>
-            <h4 className="my-2">{data.title}</h4>
+            <h4 className="my-2 text-white font-bold">{data.title}</h4>
             <p className="text-xs text-white/40">{data.description}</p>
             <div className="w-full flex justify-between items-center mt-3">
               <div className="flex flex-col items-center">
@@ -109,4 +109,5 @@ const Campaigns = () => {
     </div>
   );
 };
+
 export default Campaigns;
